@@ -19,7 +19,7 @@ $("document").ready(function(){
                 .bind('change',onChangeEvent);
         
                 $(window).resize(resizedWindow);
-                $('#logo').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+                $('.Thing').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
                 $('#twoButton').bind('dblclick', dblClickedMe);
                 $("form").submit(function() { alert("Submit button clicked") });
                 $('#threeButton').bind('click',unbindLogo);
@@ -61,12 +61,12 @@ $("#second").html("Window was resized W: " + $(window).width() + " H: " + $(wind
 
 function mouseOverMe()
 {
-$("#second").html("You put your cursor on my logo");
+$(".Thing").html("Thing 2");
 }
 
 function mouseOutMe()
 {
-$("#second").html("You left my logo");
+$(".Thing").html("Thing");
 }
 
 function dblClickedMe()
@@ -78,3 +78,5 @@ function unbindLogo()
 {
 $('#logo').unbind('mouseover', mouseOverMe).unbind('mouseout', mouseOutMe);
 }
+
+
