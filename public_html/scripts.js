@@ -7,7 +7,7 @@
 $("document").ready(function(){
    $(".Thing").css("background-color", "red");
    
-   $('h2:first').css({"background-color":"purple","color":"white"});
+   $('p:first').css({"background-color":"purple","color":"white"});
    
    
    $('#oneButton').bind('click',alertButtonClick);
@@ -19,11 +19,34 @@ $("document").ready(function(){
                 .bind('change',onChangeEvent);
         
                 $(window).resize(resizedWindow);
-                $('.Thing').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+                $('.Thing').bind('mouseover', mouseOver).bind('mouseout', mouseOut);
                 $('#twoButton').bind('dblclick', dblClickedMe);
                 $("form").submit(function() { alert("Submit button clicked") });
                 $('#threeButton').bind('click',unbindLogo);
+                
+                
+                $('#replaceWHtml').bind('click', replaceWHtml);
+                $('#replaceWText').bind('click', replaceWText);
+                $('#addAPara').bind('click', addAPara);
+                $('#removeAPara').bind('click', removeAPara);
 });
+
+function replaceWHtml(){
+    $('#h1Tag').html('<h3>H3 Thing</h3>');
+}
+function replaceWText(){
+    $('#h1Tag2').text('<h3>H3 Thing</h3>');
+}
+
+
+function addAPara(){
+    $('#addAPara').append('<p>Another paragraph</p>');
+}
+
+function removeAPara(){
+    $('#removeAPara p:last').remove();
+}
+
 
 function alertButtonClick() {
 alert("There was a button clicked");
@@ -59,14 +82,14 @@ function resizedWindow()
 $("#second").html("Window was resized W: " + $(window).width() + " H: " + $(window).height());
 }
 
-function mouseOverMe()
+function mouseOver()
 {
-$(".Thing").html("Thing 2");
+$(".Thing").css("background-color", "green");
 }
 
-function mouseOutMe()
+function mouseOut()
 {
-$(".Thing").html("Thing");
+$(".Thing").css("background-color", "red");
 }
 
 function dblClickedMe()
