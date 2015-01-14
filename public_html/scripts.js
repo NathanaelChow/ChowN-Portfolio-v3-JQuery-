@@ -26,25 +26,40 @@ $("document").ready(function(){
                 
                 
                 $('#replaceWHtml').bind('click', replaceWHtml);
-                $('#replaceWText').bind('click', replaceWText);
                 $('#addAPara').bind('click', addAPara);
                 $('#removeAPara').bind('click', removeAPara);
+                
+                $('#show').css('visibility', 'hidden');
+                $('#hide').bind('click', hideThePage);
+                $('#show').bind('visibility', showThePage);
+
+
 });
 
-function replaceWHtml(){
-    $('#h1Tag').html('<h3>H3 Thing</h3>');
+
+function hideThePage(){
+    $('#show').css('visibility', 'visible');
+    $('div').hide('slide', {}, 2500);
+    $('#show').show('fold', {}, 2500);
 }
-function replaceWText(){
-    $('#h1Tag2').text('<h3>H3 Thing</h3>');
+
+function showThePage(){
+    $('div').show('fold', {}, 2500);
+    $('show').hide('puff', {}, 2500);
+
+}
+
+function replaceWHtml(){
+    $('#Thing2').html('<h4>Thing 2</h4>');
 }
 
 
 function addAPara(){
-    $('#addAPara').append('<p>Another paragraph</p>');
+    $('#randPara').append('<p>Another paragraph</p>');
 }
 
 function removeAPara(){
-    $('#removeAPara p:last').remove();
+    $('#randPara p:last').remove();
 }
 
 
@@ -94,7 +109,7 @@ $(".Thing").css("background-color", "red");
 
 function dblClickedMe()
 {
-$("#second").html("You double clicked my button");
+$("#second").html("You double clicked this button");
 }
 
 function unbindLogo()
