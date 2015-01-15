@@ -7,6 +7,8 @@
 $("document").ready(function(){
    $(".Thing").css("background-color", "red");
    
+   $('#superHumans').accordion({header: "h4"});
+   
    $('p:first').css({"background-color":"purple","color":"white"});
    
    
@@ -45,7 +47,7 @@ function hideThePage(){
 
 function showThePage(){
     $('div').show('fold', {}, 2500);
-    $('show').hide('puff', {}, 2500);
+    $('#show').hide('puff', {}, 2500);
 
 }
 
