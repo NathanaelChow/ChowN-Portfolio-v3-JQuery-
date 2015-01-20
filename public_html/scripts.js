@@ -5,8 +5,9 @@
  */
 
 $("document").ready(function(){
+    //Changes the title to red
    $(".Thing").css("background-color", "red");
-   
+   //Creates the header
    $('#superHumans').accordion({header: "h4"});
    
    $('p:first').css({"background-color":"purple","color":"white"});
