@@ -1,0 +1,69 @@
+div{
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+    padding: 32px;
+}
+body{
+    background-image: url(http://wallpaperscraft.com/image/red_black_abstract_496_1920x1080.jpg?orig=3);
+    background-size: cover;
+    color: red;
+ 
+}
+
+.container{
+    border-color: red;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+    
+}
+.row{
+    border-color: red;
+    padding: 80px;
+}
+.row1{
+    font-size: 18px;
+    padding: 20px;
+}
+.col-xs-9{
+    padding: 25px;
+    font-size: 18px;
+}
+.col-xs-3{
+    padding-bottom: 90px;
+}
+img{
+    width: 360px;
+    height: auto;
+}
+div container{
+    padding: 48px;
+}
+.nav a{
+    font-size: 30px;
+    color: red;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.jumbotron{
+    color: red;
+    border: 5px;
+    border: solid;
+    background-color: black;
+    background-size: cover;
+}
+.dropdown{
+    font-size: 30px;
+}
+.panel-body{
+    background-color: black;
+}
+.panel-collapse collapse{
+    background-color: black;
+}
+.img-responsive{
+    margin-bottom: 20px;
+}

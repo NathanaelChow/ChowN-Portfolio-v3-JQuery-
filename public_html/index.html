@@ -11,13 +11,18 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="scripts.js"></script>
         
         <script type="text/javascript" src="fancybox/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
         <script type="text/javascript" src="fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script> 
         <script type="text/javascript" src="fancybox/fancybox/jquery.easing-1.4.pack.js"></script>
         <link rel="stylesheet" href="fancybox/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
         <link type="type/css" rel="stylesheet" href="style.css">
+        <!--The FEISH backgrounnd video -->
+        <video autoplay loop poster="aquarium.jpg" id="bgvid">
+            <source src="aquarium.mp4" type="video/mp4">
+        </video>
         
         <script type="text/javascript">
             $("document").ready(function(){
@@ -43,7 +48,7 @@ and open the template in the editor.
             });
         </script>
         
-      </head>
+     </head>
     <body>
         <p id="show">show</p>
             <div class="Thing">
@@ -51,6 +56,23 @@ and open the template in the editor.
             <h1 id="Thing2">Thing</h1>
         
         </div>
+        
+        <ul class="nav nav-tabs" role="tablist">
+         <li class="active"><a href="http://localhost:8383/ChowN%20Portfolio-v2/Homepage.html">Portfolio-v2</a></li>
+        </ul>
+        
+        <!--This is the flippable  -->
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+                    <p>HI</p>
+                </div>
+		<div class="back">
+                    <p>BYE</p>
+		</div>
+	</div>
+        </div>
+             
         <p>Paragraph1</p>
         <p id="replaceWHtml">Paragraph2</p> 
         
@@ -73,7 +95,7 @@ and open the template in the editor.
 
 <div>
 
-<p><strong>Events Triggered on the Page:</strong></p>
+    <p><strong>Events Triggered on the Page:</strong></p>
 
 <p id="second">Waiting for Event</p>
 
@@ -110,12 +132,12 @@ and open the template in the editor.
         Milestone 1: Add a draggable, resizeable, sortable tabbed box to your website
         -->
         <div id="tabs">
-            <ul id="sortMe">
+            <ul id="sortMe"><!--Names of the tabs -->
                 <li><a href="#fragment-1"><span>Dieting</span></a></li>
                 <li><a href="#fragment-2"><span>Sales</span></a></li>
                 <li><a href="#fragment-3"><span>NLP</span></a></li>
             </ul>
-            
+            <!--Text inside the box -->
             <div id="fragment-1">
                 This is text 1.
             </div>
@@ -149,6 +171,8 @@ and open the template in the editor.
             <span><a rel="example_group" href="images/Photo3.jpg"><img src="images/Photo3_Thumb.jpg" title="Mountain Mist"></a></span>
             <span><a rel="example_group" href="images/Photo4.jpg"><img src="images/Photo4_Thumb.jpg" title="Misty Fields"></a></span>
         </div>
+        
+        
         
         
 </body>

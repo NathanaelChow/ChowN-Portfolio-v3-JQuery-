@@ -10,9 +10,6 @@ $("document").ready(function(){
    //Creates the header
    $('#superHumans').accordion({header: "h4"});
    
-   $('p:first').css({"background-color":"purple","color":"white"});
-   
-   
    $('#oneButton').bind('click',alertButtonClick);
    
    $('#textBox1').bind('blur',onBlurEvent)

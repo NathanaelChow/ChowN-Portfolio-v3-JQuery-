@@ -3,6 +3,8 @@
    body {
        cursor: url("face.bmp"),auto;
    }
+   
+/* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
 }
@@ -10,10 +12,18 @@
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);
 	}
-
+.front{
+        background-color: black;            
+      }
+        .back{
+        background-color: red;            
+        }
+        
 .flip-container, .front, .back {
 	width: 320px;
 	height: 480px;
+
+        color: white;
 }
 
 /* flip speed goes here */
@@ -44,5 +54,27 @@
 .back {
 	transform: rotateY(180deg);
 }
-    
 
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(aquarium.jpg) no-repeat;
+background-size: cover;
+}
+
+#Thing2{
+    font-size: 40px;
+}
+
+.active a {
+    cursor: pointer;
+    transition: padding-left 250ms ease-out;
+    color: red;
+    font-size: 30px;
+    /* trans pattern:  property duration timingMethod delay */
+}
+
+.active a:hover {
+    padding-left: 20px;
+}
