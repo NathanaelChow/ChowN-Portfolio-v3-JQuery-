@@ -12,15 +12,24 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script type="text/javascript" src="scripts.js"></script>
         
-        <!-- Fancybox -->
-        <script type="text/javascript" src="fancybox/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-        <script type="text/javascript" src="fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script> 
+        <script type="text/javascript" src="js/source/jquery.fancybox.pack.js"></script>
         <script type="text/javascript" src="fancybox/fancybox/jquery.easing-1.3.pack.js"></script>
-        <link rel="stylesheet" href="fancybox/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+        
+        <!-- Fancybox -->
+        <script type="text/javascript" src="js/source/jquery.fancybox.js?v=2.1.5"></script>
+        <link rel="stylesheet" type="text/css" href="js/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        
+        <script type="text/javascript" src="fancybox/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+       <!--<script type="text/javascript" src="fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script> -->
+        <script type="text/javascript" src="fancybox/fancybox/jquery.easing-1.3.pack.js"></script>
+       <!--<link rel="stylesheet" href="fancybox/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />-->
+       
+       
         
         <link type="type/css" rel="stylesheet" href="style.css" />
         
@@ -29,29 +38,34 @@ and open the template in the editor.
         <script type="text/javascript">
             $("document").ready(function(){
                 
+               
+                
+               /* Simple image gallery. Uses default settings */
+               
+		$('.fancybox').fancybox({
+                    transitionIn    :	"elastic",
+                    transitionOut   :	"elastic",
+                    titlePosition   : 'over'
+		});
+               
                 $("#tabs").tabs();
                 $("#tabs").css({'width':'500'});
                 $("#tabs").draggable();
                 $("#tabs").resizable();
                 $("#sortMe").sortable();
                 
-                $("a[rel=example_group]").fancybox({
-                  'transitionIn' : 'elastic',
-                  'transitionOut' : 'elastic',
-                  'titlePosition' : 'over',
-                  'titleFormat'	: function(title, currentArray, currentIndex, currentOpts)
-                  {
-                  return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';      
-                  }  
-                  }); 
-                
-                $(".fancyImg").fancybox();
+               
             });
         </script>
+        
     </head>
     <body>
+        
+        
+        <!--
       
         <!-- Code for the aquarium background video -->
+
         <video autoplay loop poster="aquarium.jpg" id="bgvid">
             <source src="aquarium.mp4" type="video/mp4">
         </video>
@@ -169,16 +183,22 @@ and open the template in the editor.
         Milestone 5: Add a lightbox feature to your website
         -->
         <div>
-            <h2>JQuery UI & More</h2>
-            
-            <span><a rel="example_group" href="images/Photo1.jpg"><img src="images/Photo1_Thumb.jpg" title="Boat"></a></span>
-            <span><a rel="example_group" href="images/Photo2.jpg"><img src="images/Photo2_Thumb.jpg" title="Swans"></a></span>
-            <span><a rel="example_group" href="images/Photo3.jpg"><img src="images/Photo3_Thumb.jpg" title="Mountain Mist"></a></span>
-            <span><a rel="example_group" href="images/Photo4.jpg"><img src="images/Photo4_Thumb.jpg" title="Misty Fields"></a></span>
-            
-             <a class="fancyImg" href="images/Photo4.jpg"><img src="images/Photo4_Thumb.jpg" title="Misty Fields" /></a>
+            <h1>fancyBox</h1>
+
+            <p>This is a demonstration. More information and examples: <a href="http://fancyapps.com/fancybox/">www.fancyapps.com/fancybox/</a></p>
+
+            <h3>Simple image gallery</h3>
+            <p>
+		<a class="fancybox" href="js/demo/1_b.jpg" data-fancybox-group="gallery" title="Countryside"><img src="js/demo/1_s.jpg" alt="" /></a>
+
+		<a class="fancybox" href="js/demo/2_b.jpg" data-fancybox-group="gallery" title="Lakeside"><img src="js/demo/2_s.jpg" alt="" /></a>
+
+		<a class="fancybox" href="js/demo/3_b.jpg" data-fancybox-group="gallery" title="Sunrise"><img src="js/demo/3_s.jpg" alt="" /></a>
+
+		<a class="fancybox" href="js/demo/4_b.jpg" data-fancybox-group="gallery" title="Eiffel Tower"><img src="js/demo/4_s.jpg" alt="" /></a>
+            </p>
            
         </div>
-           
+              
     </body>
 </html>
